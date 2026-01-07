@@ -1,0 +1,47 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+  max-height: 128px;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.header-logo:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.logo-img {
+  height: 128px;
+  width: auto;
+  object-fit: contain;
+  /* SVG dimensions: 189x248 (aspect ratio ~0.762:1) */
+  /* At 128px height, width will be ~98px */
+}
+
+@media (max-width: 968px) {
+  .logo-img {
+    height: 112px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 100px;
+  }
+  
+  .header-scrolled .logo-img {
+    height: 88px;
+  }
+}
+
+.header-scrolled .logo-img {
+  height: 112px;
+}
+

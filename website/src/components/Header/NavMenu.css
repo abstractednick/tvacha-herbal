@@ -1,0 +1,88 @@
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-list {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: all var(--transition-base);
+  display: block;
+  position: relative;
+}
+
+/* Inactive state */
+.nav-menu-link:not(.nav-menu-link-active) {
+  color: var(--text-secondary);
+}
+
+.nav-menu-link:not(.nav-menu-link-active):hover {
+  color: var(--deep-herbal-green);
+}
+
+/* Active state */
+.nav-menu-link-active {
+  color: var(--deep-herbal-green);
+  font-weight: 600;
+}
+
+.nav-menu-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  height: 3px;
+  background-color: var(--deep-herbal-green);
+  transform: scaleX(1);
+  border-radius: 2px 2px 0 0;
+}
+
+/* Hover effect for inactive links */
+.nav-menu-link:not(.nav-menu-link-active)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  height: 2px;
+  background-color: var(--deep-herbal-green);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.nav-menu-link:not(.nav-menu-link-active):hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu-link:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Hide on mobile */
+@media (max-width: 968px) {
+  .nav-menu {
+    display: none;
+  }
+}
+

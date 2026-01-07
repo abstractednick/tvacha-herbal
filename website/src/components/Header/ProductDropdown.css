@@ -1,0 +1,114 @@
+.product-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  min-width: 280px;
+  max-width: 400px;
+  padding: var(--spacing-md);
+  z-index: 1001;
+  animation: dropdownFadeIn 0.3s ease-out;
+  border: 1px solid var(--herbal-beige);
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.dropdown-section {
+  border-bottom: 1px solid var(--herbal-beige);
+  padding-bottom: var(--spacing-md);
+}
+
+.dropdown-section:last-of-type {
+  border-bottom: none;
+}
+
+.dropdown-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.dropdown-list li {
+  margin: 0;
+}
+
+.dropdown-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  display: block;
+  border-radius: 6px;
+  transition: all var(--transition-base);
+}
+
+.dropdown-link:hover {
+  background-color: var(--soft-mint);
+  color: var(--deep-herbal-green);
+  padding-left: var(--spacing-md);
+}
+
+.dropdown-link:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 2px;
+}
+
+.dropdown-footer {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--herbal-beige);
+}
+
+.dropdown-cta {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--deep-herbal-green);
+  background-color: transparent;
+  border: 1.5px solid var(--deep-herbal-green);
+  border-radius: var(--radius-xl);
+  padding: 10px var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.dropdown-cta:hover {
+  background-color: var(--soft-mint);
+  transform: translateY(-1px);
+}
+
+.dropdown-cta:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 2px;
+}
+

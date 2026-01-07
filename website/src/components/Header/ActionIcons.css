@@ -1,0 +1,119 @@
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.action-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.action-icon:hover {
+  color: var(--deep-herbal-green);
+  background-color: var(--soft-mint);
+  transform: scale(1.1);
+}
+
+.action-icon:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 2px;
+}
+
+.action-icon-wrapper {
+  position: relative;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--deep-herbal-green);
+  color: var(--text-white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Auth Dropdown */
+.auth-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  min-width: 160px;
+  padding: var(--spacing-xs);
+  z-index: 1002;
+  animation: dropdownFadeIn 0.3s ease-out;
+  border: 1px solid var(--herbal-beige);
+}
+
+.auth-dropdown-item {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 6px;
+  transition: all var(--transition-base);
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.auth-dropdown-item:hover {
+  background-color: var(--soft-mint);
+  color: var(--deep-herbal-green);
+}
+
+.auth-dropdown-item:focus {
+  outline: 2px solid var(--deep-herbal-green);
+  outline-offset: 2px;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide on very small screens - show only cart */
+@media (max-width: 480px) {
+  .action-icon:not(.cart-icon) {
+    display: none;
+  }
+}
+

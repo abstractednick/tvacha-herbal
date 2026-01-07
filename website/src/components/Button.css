@@ -1,0 +1,70 @@
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--deep-herbal-green);
+  color: var(--text-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  background-color: #256D5A;
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--deep-herbal-green);
+  border: 1.5px solid var(--deep-herbal-green);
+}
+
+.btn-secondary:hover {
+  background-color: var(--soft-mint);
+  border-color: var(--deep-herbal-green);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Ripple effect on click */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+

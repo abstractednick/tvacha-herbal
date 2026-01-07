@@ -1,0 +1,219 @@
+/* ============================================
+   TVACHA HERBAL - DESIGN SYSTEM
+   ============================================ */
+
+/* CSS Variables - Color System */
+:root {
+  /* Primary Colors */
+  --primary-mint-green: #CFF3E8;
+  --soft-mint: #E8FBF5;
+  --deep-herbal-green: #2F7F6A;
+  --mint-gradient-start: #DFF8F1;
+  --mint-gradient-end: #BFEDE0;
+  
+  /* Secondary Colors */
+  --cream-white: #FAFEFC;
+  --herbal-beige: #F2F7F3;
+  --soft-sage: #9FC8B8;
+  
+  /* Accent Colors */
+  --gold-accent: #C9A24D;
+  --soft-blush: #F6DDE3;
+  
+  /* Text Colors */
+  --text-primary: #1F2F2B;
+  --text-secondary: #4F6F66;
+  --text-muted: #7A9B91;
+  --text-white: #FFFFFF;
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 80px;
+  --spacing-4xl: 120px;
+  
+  /* Border Radius */
+  --radius-sm: 16px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(47, 127, 106, 0.08);
+  --shadow-card: 0 8px 30px rgba(47, 127, 106, 0.12);
+  --shadow-hover: 0 12px 40px rgba(47, 127, 106, 0.15);
+  
+  /* Transitions */
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Max Width */
+  --max-width: 1320px;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cream-white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Typography System */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.small-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Container & Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.section {
+  padding: var(--spacing-4xl) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-3xl) 0;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-mint {
+  background-color: var(--soft-mint);
+}
+
+.bg-cream {
+  background-color: var(--cream-white);
+}
+
+.bg-beige {
+  background-color: var(--herbal-beige);
+}
+
+.bg-deep-green {
+  background-color: var(--deep-herbal-green);
+  color: var(--text-white);
+}
+
+.gradient-mint {
+  background: linear-gradient(135deg, var(--mint-gradient-start) 0%, var(--mint-gradient-end) 100%);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  
+  h2 {
+    font-size: 32px;
+  }
+  
+  h3 {
+    font-size: 26px;
+  }
+  
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}

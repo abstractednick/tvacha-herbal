@@ -31,6 +31,18 @@ dist/
 build/
 *.egg-info/
 
+# Frontend (React)
+website/build/
+website/.env.local
+
+# Admin Panel (React)
+admin-panel/build/
+admin-panel/.env.local
+
+# Backend
+backend/.env
+backend/logs/
+
 # Logs
 *.log
 logs/

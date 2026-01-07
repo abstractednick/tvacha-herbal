@@ -1,0 +1,83 @@
+.product-dropdown-mobile {
+  background-color: var(--soft-mint);
+  padding: var(--spacing-md) 0;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.mobile-dropdown-section {
+  padding: 0 var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.mobile-dropdown-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.mobile-dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-dropdown-list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mobile-dropdown-link {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 6px;
+  transition: all var(--transition-base);
+}
+
+.mobile-dropdown-link:hover {
+  background-color: var(--cream-white);
+  color: var(--deep-herbal-green);
+  padding-left: var(--spacing-md);
+}
+
+.mobile-dropdown-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--herbal-beige);
+  margin-top: var(--spacing-sm);
+}
+
+.mobile-dropdown-cta {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--deep-herbal-green);
+  text-decoration: none;
+  text-align: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1.5px solid var(--deep-herbal-green);
+  border-radius: var(--radius-xl);
+  background-color: transparent;
+  transition: all var(--transition-base);
+}
+
+.mobile-dropdown-cta:hover {
+  background-color: var(--deep-herbal-green);
+  color: var(--text-white);
+}
+
